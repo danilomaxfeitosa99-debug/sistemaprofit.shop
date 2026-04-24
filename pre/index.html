@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Reggeli mézes szokás: Amit érdemes tudni az emlékezetről</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,400;0,700;1,400&family=Source+Sans+3:wght@300;400;600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'Source Sans 3',sans-serif;background:#fff;color:#333;-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit;text-decoration:none}
+
+/* ===== NAVBAR ===== */
+.navbar{background:#1a1a1a;padding:10px 0;border-bottom:3px solid #e8a530}
+.navbar-inner{max-width:720px;margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center}
+.nav-logo{font-family:'Merriweather',serif;font-size:15px;color:#fff;font-weight:700}
+.nav-logo span{color:#e8a530}
+.nav-links{display:flex;gap:18px}
+.nav-links a{font-size:11px;color:#ccc;font-weight:400;transition:color .2s}
+.nav-links a:hover{color:#e8a530}
+
+/* ===== BREADCRUMB ===== */
+.breadcrumb{max-width:720px;margin:0 auto;padding:10px 20px;font-size:10px;color:#999}
+.breadcrumb a{color:#e8a530}
+.breadcrumb span{margin:0 4px;color:#ccc}
+
+/* ===== ARTICLE CONTAINER ===== */
+.article{max-width:720px;margin:0 auto;padding:0 20px 30px}
+
+/* ===== CATEGORY TAG ===== */
+.cat-tag{display:inline-block;background:#e8a530;color:#fff;font-size:10px;font-weight:600;padding:4px 12px;border-radius:3px;text-transform:uppercase;letter-spacing:1px;margin-bottom:12px}
+
+/* ===== HEADLINE ===== */
+.headline{font-family:'Merriweather',serif;font-size:26px;color:#1a1a1a;line-height:1.35;font-weight:700;margin-bottom:10px}
+
+/* ===== META ===== */
+.meta{font-size:11px;color:#888;margin-bottom:18px;padding-bottom:14px;border-bottom:1px solid #eee}
+.meta strong{color:#666}
+
+/* ===== HERO IMAGE ===== */
+.hero-wrap{margin-bottom:20px;border-radius:6px;overflow:hidden;box-shadow:0 2px 12px rgba(0,0,0,.08)}
+.hero-wrap img{width:100%;cursor:pointer;transition:transform .3s}
+.hero-wrap img:hover{transform:scale(1.01)}
+.hero-caption{font-size:10px;color:#999;padding:6px 0;font-style:italic}
+
+/* ===== CTA BUTTON — ENORME ===== */
+.cta-block{margin:22px 0;padding:22px;background:linear-gradient(135deg,#e8a530,#d4922a);border-radius:10px;text-align:center;box-shadow:0 6px 24px rgba(210,150,40,.35)}
+.cta-block h2{font-family:'Merriweather',serif;font-size:20px;color:#fff;font-weight:700;margin-bottom:6px;line-height:1.3}
+.cta-block p{font-size:13px;color:rgba(255,255,255,.8);margin-bottom:14px;font-weight:300}
+.btn-huge{display:block;width:100%;background:#1a1a1a;color:#e8a530;padding:20px 30px;font-size:20px;font-weight:700;border-radius:8px;text-align:center;transition:all .25s;letter-spacing:.5px;border:3px solid #e8a530}
+.btn-huge:hover{background:#000;transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,.3)}
+.cta-block small{display:block;margin-top:8px;font-size:10px;color:rgba(255,255,255,.6)}
+
+/* ===== ARTICLE TEXT ===== */
+.art-text{font-size:17px;line-height:2;color:#444;margin-bottom:16px;font-weight:400}
+.art-text strong{color:#1a1a1a;font-weight:700}
+.art-text em{color:#c48a20;font-style:normal;font-weight:600}
+
+/* ===== QUESTION BOX ===== */
+.q-box{margin:22px 0;padding:20px 22px;background:#faf6ee;border-left:5px solid #e8a530;border-radius:0 8px 8px 0}
+.q-box h3{font-family:'Merriweather',serif;font-size:19px;color:#1a1a1a;font-weight:700;line-height:1.45}
+.q-box h3 em{color:#c48a20;font-style:normal}
+
+/* ===== TESTIMONIAL ===== */
+.testimonial{margin:22px 0;background:#faf6ee;border-radius:10px;overflow:hidden;box-shadow:0 2px 14px rgba(0,0,0,.06)}
+.testimonial img{width:100%;max-height:320px;object-fit:cover;cursor:pointer}
+.testimonial .t-body{padding:18px 22px}
+.testimonial .t-quote{font-family:'Merriweather',serif;font-size:16px;color:#444;font-style:italic;line-height:1.7;margin-bottom:8px}
+.testimonial .t-name{font-size:12px;color:#e8a530;font-weight:700}
+
+/* ===== INFO LIST ===== */
+.info-list{margin:22px 0;background:#1a1a1a;border-radius:10px;overflow:hidden}
+.info-list .il-head{padding:16px 22px;font-family:'Merriweather',serif;font-size:17px;color:#e8a530;font-weight:700;border-bottom:1px solid #333}
+.il-item{padding:14px 22px;border-bottom:1px solid #2a2a2a;display:flex;gap:14px;align-items:flex-start}
+.il-item:last-child{border-bottom:none}
+.il-num{width:34px;height:34px;background:#e8a530;color:#1a1a1a;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:15px;font-weight:700;flex-shrink:0}
+.il-txt{font-size:15px;color:#ddd;line-height:1.7;font-weight:300}
+.il-txt strong{color:#fff;font-weight:600}
+
+/* ===== HIGHLIGHT BAR ===== */
+.highlight-bar{margin:22px 0;padding:18px 22px;background:#faf6ee;border-radius:8px;border:2px dashed #e8a530;text-align:center}
+.highlight-bar p{font-family:'Merriweather',serif;font-size:16px;color:#1a1a1a;font-style:italic;line-height:1.6;font-weight:400}
+
+/* ===== CTA BOTTOM — ENORME ===== */
+.cta-bottom{margin:22px 0;padding:28px 22px;background:#1a1a1a;border-radius:10px;text-align:center;border:3px solid #e8a530}
+.cta-bottom h3{font-family:'Merriweather',serif;font-size:22px;color:#e8a530;margin-bottom:6px;font-weight:700}
+.cta-bottom p{font-size:14px;color:#aaa;margin-bottom:16px;font-weight:300}
+.btn-huge-alt{display:block;width:100%;background:#e8a530;color:#1a1a1a;padding:22px 30px;font-size:22px;font-weight:700;border-radius:8px;text-align:center;transition:all .25s;letter-spacing:.5px}
+.btn-huge-alt:hover{background:#d4922a;transform:translateY(-2px);box-shadow:0 8px 30px rgba(210,150,40,.4)}
+.cta-bottom small{display:block;margin-top:10px;font-size:10px;color:#666}
+
+/* ===== DISCLAIMER — COMPLETO ===== */
+.disclaimer{margin:28px 0 0;padding:22px;background:#f5f2ec;border-radius:8px;border:1px solid #e0d8cc}
+.disclaimer h4{font-family:'Merriweather',serif;font-size:13px;color:#666;margin-bottom:10px;font-weight:700}
+.disclaimer p{font-size:11px;color:#888;line-height:1.9;margin-bottom:8px}
+.disclaimer p:last-child{margin-bottom:0}
+.disclaimer strong{color:#666}
+
+/* ===== FOOTER ===== */
+footer{max-width:720px;margin:0 auto;padding:20px 20px 40px;border-top:1px solid #eee}
+.footer-company{margin-bottom:12px;padding:14px 18px;background:#faf6ee;border-radius:6px}
+.footer-company h5{font-family:'Merriweather',serif;font-size:12px;color:#1a1a1a;margin-bottom:6px}
+.footer-company p{font-size:10px;color:#888;line-height:1.8}
+.footer-links{text-align:center;font-size:10px;color:#aaa;margin-top:10px}
+.footer-links a{color:#e8a530;margin:0 6px}
+.footer-links a:hover{text-decoration:underline}
+.footer-copy{text-align:center;font-size:9px;color:#bbb;margin-top:8px}
+
+@media(max-width:640px){
+.headline{font-size:21px}
+.btn-huge{font-size:18px;padding:18px 20px}
+.btn-huge-alt{font-size:19px;padding:20px 20px}
+.nav-links{display:none}
+.art-text{font-size:16px}
+.cta-block h2{font-size:17px}
+.cta-bottom h3{font-size:19px}
+}
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+<div class="navbar-inner">
+<div class="nav-logo">Egészség<span>Plusz</span></div>
+<div class="nav-links">
+<a href="#">Egészség</a>
+<a href="#">Természetes módszerek</a>
+<a href="#">Receptek</a>
+</div>
+</div>
+</nav>
+
+<!-- BREADCRUMB -->
+<div class="breadcrumb">
+<a href="#">Főoldal</a><span>›</span><a href="#">Egészség</a><span>›</span><a href="#">Természetes módszerek</a><span>›</span>Mézes reggeli szokás
+</div>
+
+<!-- ARTICLE -->
+<article class="article">
+
+<!-- CATEGORY -->
+<span class="cat-tag">Természetes jó közérzet</span>
+
+<!-- HEADLINE -->
+<h1 class="headline">Miért beszél egész Magyarország erről a reggeli mézes szokásról?</h1>
+
+<!-- META -->
+<div class="meta">
+<strong>Szerző:</strong> Horváth Katalin, egészség rovat &nbsp;|&nbsp;
+<strong>Frissítve:</strong> <script>var d=new Date();var m=['január','február','március','április','május','június','július','augusztus','szeptember','október','november','december'];document.write(d.getFullYear()+'. '+m[d.getMonth()]+' '+d.getDate()+'.')</script> &nbsp;|&nbsp;
+<strong>Olvasási idő:</strong> 3 perc
+</div>
+
+<!-- HERO IMAGE -->
+<div class="hero-wrap">
+<a href="https://lp.sistemaprofit.shop/preclick"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/mem17-honey-handwritten-table-Sx5HraomJRSfqmd8dKENEB.webp" alt="Mézes reggeli szokás"></a>
+</div>
+<p class="hero-caption">Kép: Hagyományos magyar mézes reggeli összetevők</p>
+
+<!-- ========== CTA 1 — ENORME ========== -->
+<div class="cta-block">
+<h2>&#9654; Nézze meg a videót, amely bemutatja a teljes receptet</h2>
+<p>Melyik összetevőket használja · Hogyan készítse el · Mikor fogyassza</p>
+<a href="https://lp.sistemaprofit.shop/preclick" class="btn-huge">KATTINTSON IDE A VIDEÓ MEGTEKINTÉSÉHEZ &rarr;</a>
+<small>Ingyenes tájékoztató tartalom · Nincs regisztráció</small>
+</div>
+
+<!-- TEXT -->
+<p class="art-text">Ismerős az érzés? Bemegy a konyhába — és <strong>nem emlékszik, miért ment be.</strong> Találkozik egy régi ismerőssel — és <strong>nem jut eszébe a neve.</strong> Leteszi a szemüvegét — és <strong>percekig keresi.</strong></p>
+
+<p class="art-text">A legtöbb ember azt mondja: <em>„Ez normális, ezzel nem lehet mit tenni."</em></p>
+
+<p class="art-text">De mi van, ha <strong>nem ez az egész történet?</strong></p>
+
+<!-- QUESTION BOX -->
+<div class="q-box">
+<h3>Mi van, ha a reggeli szokásainkban van a kulcs a <em>szellemi frissességhez?</em></h3>
+</div>
+
+<p class="art-text">Egy <strong>vidéki méhész Eger környékéről</strong> — aki 74 éves, és a szomszédok szerint „élesebb, mint a fiatalok" — mesélt egy régi családi szokásról. Egy egyszerű <em>mézes keverékről</em>, amelyet a nagymamájától tanult.</p>
+
+<p class="art-text">Nem valami drága készítmény. Nem valami bonyolult módszer. Csak <strong>egy kanál méz</strong> — de <em>nem úgy, ahogy gondolná.</em></p>
+
+<p class="art-text">Mert önmagában a méz csak egy édesítő. De ha <strong>néhány másik összetevővel</strong> keverjük össze — amelyek minden magyar konyhában megtalálhatók — és <em>reggel, éhgyomorra</em> fogyasztjuk... az valami egészen más.</p>
+
+<!-- QUESTION BOX 2 -->
+<div class="q-box">
+<h3>De miért pont <em>a méz?</em> És miért nem elég egyszerűen <em>megenni egy kanállal?</em></h3>
+</div>
+
+<!-- TESTIMONIAL -->
+<div class="testimonial">
+<a href="https://lp.sistemaprofit.shop/preclick"><img src="https://d2xsxph8kpxj0f.cloudfront.net/310519663297503148/jCMGTU5NUP78zZrraNsLhW/mem17-hungarian-beekeeper-elderly-3LVHzsjzNyGLAGReqLeK3m.webp" alt="Magyar méhész"></a>
+<div class="t-body">
+<p class="t-quote">„Évtizedek óta csinálom minden reggel. A nagymamám tanította. Azt mondta: 'A méz nem csak édesít — ha jól használod, az egész tested meghálálja.' Most 74 éves vagyok, és a barátaim csodálkoznak, hogy milyen friss vagyok szellemileg."</p>
+<p class="t-name">— Tóth Ferenc, 74 éves, méhész, Eger környéke</p>
+</div>
+</div>
+
+<p class="art-text">A titok nem magában a mézben van. Hanem abban, <strong>hogyan</strong> és <strong>mivel</strong> kombináljuk. Készült egy rövid videó, amelyben lépésről lépésre bemutatják a teljes receptet.</p>
+
+<!-- INFO LIST -->
+<div class="info-list">
+<div class="il-head">Amit a videóból megtudhat:</div>
+<div class="il-item">
+<span class="il-num">1</span>
+<div class="il-txt">Melyik az a <strong>természetes anyag</strong> a mézben, amelyre a jó közérzet kutatói felfigyeltek</div>
+</div>
+<div class="il-item">
+<span class="il-num">2</span>
+<div class="il-txt">A <strong>négy másik összetevő</strong>, amelyet hozzá kell adni — és <strong>minden magyar konyhában megtalálható</strong></div>
+</div>
+<div class="il-item">
+<span class="il-num">3</span>
+<div class="il-txt">Miért <strong>nem mindegy</strong>, hogyan keverjük össze — és miért fontos a <strong>sorrend</strong></div>
+</div>
+<div class="il-item">
+<span class="il-num">4</span>
+<div class="il-txt">Miért a <strong>reggel, éhgyomorra</strong> a legjobb időpont — ahogy az egri méhészek generációk óta csinálják</div>
+</div>
+</div>
+
+<!-- HIGHLIGHT -->
+<div class="highlight-bar">
+<p>„Nem a méz önmagában a titok — hanem az, ami történik, amikor a megfelelő összetevőkkel, a megfelelő időben fogyasztjuk."</p>
+</div>
+
+<!-- ========== CTA 2 — ENORME ========== -->
+<div class="cta-bottom">
+<h3>Nézze meg a teljes receptet — lépésről lépésre</h3>
+<p>Pontos összetevők · Helyes arányok · Ideális időpont · Minden egy rövid videóban</p>
+<a href="https://lp.sistemaprofit.shop/preclick" class="btn-huge-alt">VIDEÓ MEGTEKINTÉSE MOST &rarr;</a>
+<small>Ingyenes tájékoztató tartalom · Nincs regisztráció szükséges</small>
+</div>
+
+<!-- ===== DISCLAIMER COMPLETO ===== -->
+<div class="disclaimer">
+<h4>Jogi nyilatkozat és felelősségkizárás</h4>
+<p>Ez az oldal kizárólag <strong>tájékoztató jellegű</strong>, és nem minősül orvosi, egészségügyi vagy szakmai tanácsadásnak. Az itt bemutatott információk nem helyettesítik a szakorvosi konzultációt, diagnózist vagy kezelést.</p>
+<p>Az étrend-kiegészítők nem helyettesítik a változatos, kiegyensúlyozott étrendet és az egészséges életmódot. Az egyéni eredmények eltérőek lehetnek. Bármilyen étrend- vagy életmódváltoztatás előtt <strong>konzultáljon kezelőorvosával.</strong></p>
+<p>A cikkben szereplő vélemények és beszámolók <strong>személyes tapasztalatokat tükröznek</strong>, és nem minősülnek tudományos bizonyítéknak. Az oldal nem állítja, hogy bármely termék vagy módszer alkalmas betegségek megelőzésére, kezelésére vagy gyógyítására.</p>
+<p>Az oldalon található külső hivatkozások harmadik felek weboldalaira vezethetnek, amelyek tartalmáért és adatvédelmi gyakorlatáért nem vállalunk felelősséget.</p>
+<p><strong>Üzemeltető:</strong> Természetes Jólét Média Kft. &middot; <strong>CNPJ:</strong> 64.977.447/0001-06 &middot; <strong>Székhely:</strong> Budapest, Magyarország &middot; <strong>E-mail:</strong> info@termeszetesjollet.hu</p>
+</div>
+
+</article>
+
+<!-- ===== FOOTER ===== -->
+<footer>
+<div class="footer-company">
+<h5>Természetes Jólét Média Kft.</h5>
+<p>
+<strong>CNPJ:</strong> 64.977.447/0001-06<br>
+<strong>Székhely:</strong> Budapest, Magyarország<br>
+<strong>E-mail:</strong> info@termeszetesjollet.hu<br>
+<strong>Tevékenység:</strong> Online tartalomszolgáltatás és tájékoztatás
+</p>
+</div>
+<div class="footer-links">
+<a href="privacy.html">Adatvédelmi irányelvek</a>
+<a href="terms.html">Felhasználási feltételek</a>
+</div>
+<p class="footer-copy">© <script>document.write(new Date().getFullYear())</script> Természetes Jólét Média Kft. Minden jog fenntartva.</p>
+</footer>
+
+<script>
+(function(){var q=window.location.search;if(!q)return;document.querySelectorAll('a[href]').forEach(function(a){var h=a.getAttribute('href');if(!h||h.startsWith('#')||h.startsWith('mailto:'))return;a.setAttribute('href',h.includes('?')?h+'&'+q.substring(1):h+q)})})();
+</script>
+<script type="text/javascript" src="https://lp.sistemaprofit.shop/pretrack.js?rtkcmpid=69eac50e1a2b8581dda9415a"></script>
+</body>
+</html>
